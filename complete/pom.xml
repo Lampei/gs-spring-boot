@@ -54,6 +54,20 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>1.5.3</version>
+                <configuration>
+                    <!-- App information -->
+                    <resourceGroup>jenkins-resource-group</resourceGroup>
+                    <appName>cloudbees-jenkins-demo</appName>
+                    <region>eastus</region>
+        
+                    <!-- Java Runtime Stack for App on Linux-->
+                    <linuxRuntime>tomcat 8.5-jre8</linuxRuntime> 
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
